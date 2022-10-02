@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { routes } from "./utils/routes";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
               key={route.path}
               path={route.path}
               exact={route.exact}
-              element={route.element}
+              element={route.component}
             />
           );
         })}

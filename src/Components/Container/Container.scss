@@ -1,0 +1,16 @@
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    max-width: 520px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    max-width: 320px;
+  }
+}

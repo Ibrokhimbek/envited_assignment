@@ -1,0 +1,20 @@
+.create-btn {
+  background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 16px 70px;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+  text-align: right;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 375px) {
+  .create-btn {
+    padding: 13px 21px;
+    font-size: 16px;
+    margin-top: 34px;
+  }
+}

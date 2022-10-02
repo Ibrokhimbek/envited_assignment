@@ -1,0 +1,16 @@
+.landing-img img{
+  border-radius: 35px;
+  height: 775px;
+}
+
+@media only screen and (max-width: 960px) {
+  .landing-img img{
+    height: 521px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .landing-img img{
+    height: 292px;
+  }
+}

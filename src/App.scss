@@ -1,5 +1,15 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  background: linear-gradient(0deg, #f6f2ff, #f6f2ff), #fbfaff;
+  font-family: sans-serif;
 }
 
 .App-logo {
