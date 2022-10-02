@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Form, Input, DatePicker } from "antd";
 import { useInputHook } from "../../hooks/useInputHook";
+import { DispatchContext } from "../../contexts/event.cotext";
 const { RangePicker } = DatePicker;
 
 const Create = () => {
+  const dispatch = useContext(DispatchContext);
   const [eventName, eventChange] = useInputHook("");
   const [hostName, hostNameChange] = useInputHook("");
   const [location, locationChange] = useInputHook("");
   const [imgUrl, imgUrlChange] = useInputHook("");
+
+  const eventData = {
+    eventName,
+    hostName,
+    location,
+    imgUrl,
+  };
 
   return (
     <>
@@ -19,6 +28,15 @@ const Create = () => {
           span: 5,
         }}
         layout="horizontal"
+        onFinish={(value) => {
+          console.log(value);
+          dispatch({
+            type: "ADD",
+            ...eventData,
+            startDate: value[0]._d,
+            endDate: value[1]._d,
+          });
+        }}
       >
         <Form.Item label="Event name">
           <Input onChange={eventChange} value={eventName} />
